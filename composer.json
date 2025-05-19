@@ -1,0 +1,16 @@
+{
+    "name": "legion/ad-task-2",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Legion\\AdTask2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yukiemit",
+            "email": "202310242@fit.edu.ph"
+        }
+    ],
+    "require": {}
+}
