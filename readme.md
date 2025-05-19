@@ -7,7 +7,7 @@
   <a href="https://github.com/Yukiemit/">
   </a>
 
-  <h3 align="center">AD-TASK1</h3>
+  <h3 align="center">AD-TASK-2</h3>
 </div>
 <div align="center">
 </div>
@@ -52,7 +52,12 @@
 
 ## Overview
 
-The developer utilizes the use of looping
+-Each day file follows the same structure but with different schedule data
+-Used functions to encapsulate the schedule data and rendering logic
+-Used associative arrays to store schedule data
+-Implemented proper HTML5 structure with semantic elements
+-Included a consistent navigation back to the home page
+Applied responsive design principles with proper viewport settings
 
 ### Key Components
 
