@@ -10,21 +10,24 @@
     <h1>My Schedule</h1>
     <div class="days-container">
     <?php
-    $dayFolders = [
+    function getDayLink($day, $path) {
+        return '<a class="day-link" href="' . $path . '">' . $day . '</a>';
+    }
+
+    $days = [
         "Monday" => "./page/monday.php",
         "Tuesday" => "./page2/tuesday.php",
         "Wednesday" => "./page3/wednesday.php",
-        "Thursday" => "./page4/thursday.php",
-        "Friday" => "./page5/friday.php",
-        "Saturday" => "./page6/saturday.php",
-        "Sunday" => "page7"
+        "Thursday" => "thursday.php",
+        "Friday" => "friday.php",
+        "Saturday" => "saturday.php",
+        "Sunday" => "sunday.php"
     ];
 
-    foreach ($dayFolders as $day => $folder) {
-        $dayFile = "./$folder/" . strtolower($day) . ".php";
-        echo '<a class="day-link" href="' . $dayFile . '">' . $day . '</a>';
+    foreach ($days as $day => $file) {
+        echo getDayLink($day, $file);
     }
     ?>
-</div>
+    </div>
 </body>
 </html>
