@@ -19,7 +19,7 @@
         "Tuesday" => "./page2/tuesday.php",
         "Wednesday" => "./page3/wednesday.php",
         "Thursday" => "./page4/thursday.php",
-        "Friday" => "friday.php",
+        "Friday" => "./page5/friday.php",
         "Saturday" => "saturday.php",
         "Sunday" => "sunday.php"
     ];
