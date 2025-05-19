@@ -4,30 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thursday</title>
-    <link rel="stylesheet" href="/AD-TASK1/page4/assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Thursday Schedule</h1>
-        <div class="schedule">
-            <?php
-            $day = "Thursday";
-            $schedule = [];
+<?php
+function getSchedule($day) {
+    $schedules = [
+        "Thursday" => [
+            "7:00 AM - 8:50 AM | Mobile Application Development (F1209)",
+            "10:00 AM - 12:50 PM | Business Process (F1211)",
+            "1:00 PM - 2:50 PM | Purposive Communication (F611)"
+        ]
+    ];
+    return $schedules[$day] ?? [];
+}
 
-            if ($day == "Thursday") {
-                $schedule = [
-                "7:00 AM - 8:50 AM | Mobile Application Development (F1209)",
-                "10:00 AM - 12:50 PM | Business Process (F1211)",
-                "1:00 PM - 2:50 PM | Purposive Communication (F611)"
-                ];
-            }
+function renderSchedule($schedule) {
+    $html = '';
+    foreach ($schedule as $item) {
+        $html .= "<p>$item</p>";
+    }
+    return $html;
+}
 
-        for ($i = 0; $i < count($schedule); $i++) {
-            echo "<p>" . $schedule[$i] . '</p>';
-        }
-            ?>
+$day = "Thursday";
+$schedule = getSchedule($day);
+?>
         </div>
-        <a class="day-link" href="/AD-TASK1/index.php">Back to Home</a>
+    <div class="container">
+        <h1><?php echo $day; ?> Schedule</h1>
+        <div class="schedule">
+            <?php echo renderSchedule($schedule); ?>
+        </div>
+        <a class="day-link" href="../index.php">Back to Home</a>
     </div>
 </body>
 </html>
