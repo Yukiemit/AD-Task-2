@@ -20,8 +20,8 @@
         "Wednesday" => "./page3/wednesday.php",
         "Thursday" => "./page4/thursday.php",
         "Friday" => "./page5/friday.php",
-        "Saturday" => "saturday.php",
-        "Sunday" => "sunday.php"
+        "Saturday" => "./page6/saturday.php",
+        "Sunday" => "./page7/sunday.php"
     ];
 
     foreach ($days as $day => $file) {
